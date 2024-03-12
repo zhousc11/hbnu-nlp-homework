@@ -1,11 +1,14 @@
-# 自然语言处理作业
-湖师计信学院自然语言处理课程作业仓库
+# HBNU NLP Homework Repo
 
-# 实验一：规则分词
-[作业2.1](./exp1)
-1. 使用正向匹配法实现中文分词，并输出处理结果
-2. 使用逆向匹配法实现中文分词，并输出处理结果
-3. 使用双向匹配法实现中文分词，并输出处理结果
+This is a repo for NLP homework of HBNU.
 
-# 实验二：jieba分词
-[作业2.2](./exp2)
+EN | [中文](README_CN.md)
+
+# Exp1: Rule-based Segmentation
+[Homework2.1](./exp1)
+1. Segment Chinese text using forward matching and output the result
+2. Segment Chinese text using backward matching and output the result
+3. Segment Chinese text using bidirectional matching and output the result
+
+# EXp2: Jieba Segmentation
+[Homework2.2](./exp2)
