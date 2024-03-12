@@ -1,8 +1,12 @@
 # HBNU NLP Homework Repo
 
+EN | [中文](README_CN.md)
+
 This is a repo for NLP homework of HBNU.
 
-EN | [中文](README_CN.md)
+# Environment
+- conda venv Python 3.10
+- Jieba
 
 # Exp1: Rule-based Segmentation
 [Homework2.1](./exp1)
