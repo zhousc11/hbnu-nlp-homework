@@ -14,5 +14,5 @@ This is a repo for NLP homework of HBNU.
 2. Segment Chinese text using backward matching and output the result
 3. Segment Chinese text using bidirectional matching and output the result
 
-# EXp2: Jieba Segmentation
+# Exp2: Jieba Segmentation
 [Homework2.2](./exp2)
