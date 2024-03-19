@@ -1,5 +1,5 @@
 import jieba.posseg as pseg
-from read_file import read_file
+from exp1.read_file import read_file
 
 
 def segment_and_tag(text):
@@ -9,7 +9,7 @@ def segment_and_tag(text):
 
 
 def main():
-    file_path = '../NBA.txt'
+    file_path = '../../NBA.txt'
     content = read_file(file_path)
     content = content.replace('\n', '').replace(' ', '').replace('\t', '').replace('\r', '')
     if content is not None:

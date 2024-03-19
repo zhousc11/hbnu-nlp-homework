@@ -1,4 +1,4 @@
-from archive.dictionary import dictionary
+from exp1.archive.rule_based.dictionary import dictionary
 
 
 class BidMM(object):
@@ -76,7 +76,7 @@ class BidMM(object):
 if __name__ == '__main__':
     # open file
     try:
-        with open('NBA.txt', 'r', encoding='utf-8') as f:
+        with open('../NBA.txt', 'r', encoding='utf-8') as f:
             text = f.read()
         # remove the line break, etc.
         text = text.replace('\u3000', '').replace('\n', '')

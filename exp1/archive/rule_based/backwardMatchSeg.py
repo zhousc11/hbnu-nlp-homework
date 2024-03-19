@@ -2,33 +2,31 @@
 from dictionary import dictionary
 
 
-def forward_max_match(sentence, dictionary, max_word_length):
-    index = 0
+def backward_max_match(sentence, dictionary, max_word_length):
+    index = len(sentence)
     result = []
-    while index < len(sentence):
+    while index > 0:
         word = None
         for size in range(max_word_length, 0, -1):
-            if index + size > len(sentence):
+            if index - size < 0:  # 确保不会向左越界
                 continue
-            piece = sentence[index:index + size]
+            piece = sentence[index - size:index]  # 从右向左获取子字符串
             if piece in dictionary:
                 word = piece
-                result.append(word)
-                index += size
+                result.insert(0, word)  # 将匹配到的词插入到结果列表的开头
+                index -= size
                 break
-        if word is None:
-            word = sentence[index]
-            result.append(word)
-            index += 1
+        if word is None:  # 如果没有在字典中找到匹配的词
+            word = sentence[index - 1]
+            result.insert(0, word)  # 将单个字符插入到结果列表的开头
+            index -= 1
     return result
 
-
-# Define the segment dict
 
 # Read the text from file
 if __name__ == '__main__':
     try:
-        with open('../NBA.txt', 'r', encoding='utf-8') as f:
+        with open('../../NBA.txt', 'r', encoding='utf-8') as f:
             text = f.read()
 
         max_word_length = max(len(word) for word in dictionary)
@@ -37,7 +35,7 @@ if __name__ == '__main__':
         text = text.replace('\u3000', '').replace('\n', '')
 
         # 分词
-        result = forward_max_match(text, dictionary, max_word_length)
+        result = backward_max_match(text, dictionary, max_word_length)
 
         # output the result
         print('/'.join(result))

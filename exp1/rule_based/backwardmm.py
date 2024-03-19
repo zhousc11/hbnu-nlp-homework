@@ -1,7 +1,7 @@
-from archive.dictionary import dictionary
+from exp1.archive.rule_based.dictionary import dictionary
 
 
-class MM(object):
+class BMM(object):
     def __init__(self):
         # define maximum number of window size
         # set to 6 as 凯文-杜兰特
@@ -11,37 +11,36 @@ class MM(object):
     def cut(self, text):
         # store segmentation result
         result = []
-        # current processing position
-        index = 0
-        text_length = len(text)
+        # current processing position, different from forward match
+        # last index of the text
+        index = len(text)
         # define match dictionary
         dic = dictionary
-        # loop match
-        while text_length > index:
+        # loop match, different from forward match since processing from the end
+        while index > 0:
             # forward match process
-            for size in range(self.window_size + index, index, -1):
+            for size in range(index - self.window_size, index):
                 # get processing text
-                piece = text[index:size]
+                piece = text[size:index]
                 # if match word in dict, navigate by the matched word length
                 if piece in dic:
-                    index = size - 1
+                    index = size + 1
                     result.append(piece)
                     break
                 # current processing position + 1 so that the next word can be processed
-            index = index + 1
+            index = index - 1
+        # reverse the result list to make it in the correct order
+        result.reverse()
         return result
 
 
 if __name__ == '__main__':
     # define the text to be segmented
     try:
-        with open('NBA.txt', 'r', encoding='utf-8') as f:
+        with open('../NBA.txt', 'r', encoding='utf-8') as f:
             text = f.read()
-        # remove special characters
         text = text.replace('\u3000', '').replace('\n', '')
-        # instantiate the MM class
-        tokenizer = MM()
-        # call the method in the MM class
+        tokenizer = BMM()
         print(tokenizer.cut(text))
     except FileNotFoundError as e:
         print(f'File not found: {e}')

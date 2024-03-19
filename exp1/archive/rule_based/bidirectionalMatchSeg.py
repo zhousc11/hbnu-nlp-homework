@@ -23,7 +23,7 @@ def bidirectional_max_match(sentence, dictionary, max_word_length):
 # Read the text from file
 if __name__ == '__main__':
     try:
-        with open('../NBA.txt', 'r', encoding='utf-8') as f:
+        with open('../../NBA.txt', 'r', encoding='utf-8') as f:
             text = f.read()
 
         max_word_length = max(len(word) for word in dictionary)
