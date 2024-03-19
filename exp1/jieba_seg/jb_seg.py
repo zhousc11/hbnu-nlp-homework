@@ -1,19 +1,23 @@
 import jieba
+from read_file import read_file
 
 
-# run the main function
-if __name__ == '__main__':
+def segment_text(text):
+    # use jieba to segment
+    seg_list = jieba.cut(text, cut_all=False)
+    return '/'.join(seg_list)
+
+
+def main():
     # load the file
-    try:
-        with open('../NBA.txt', 'r', encoding='utf-8') as f:
-            content = f.read()
-        # use jieba to segment the content
-        seg_list = jieba.cut(content, cut_all=False)
-        # print the result
-        print('/'.join(seg_list))
-    except FileNotFoundError as e:
-        print('File not found:', e)
-    except PermissionError as e:
-        print('Permission denied:', e)
-    except Exception as e:
-        print('Error occurred:', e)
+    file_path = '../NBA.txt'
+    content = read_file(file_path)
+    content = content.replace('\n', '').replace(' ', '').replace('\t', '').replace('\r', '')
+    if content is not None:
+        # segement the text
+        segmented_text = segment_text(content)
+        print(segmented_text)
+
+
+if __name__ == '__main__':
+    main()

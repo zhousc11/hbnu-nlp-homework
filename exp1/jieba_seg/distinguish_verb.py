@@ -1,19 +1,20 @@
-import jieba.posseg
+import jieba.posseg as pseg
+from read_file import read_file
 
-# run the main function
+
+def segment_and_tag(text):
+    words = pseg.cut(text)
+    for word, flag in words:
+        print('%s %s' % (word, flag), end='/')
+
+
+def main():
+    file_path = '../NBA.txt'
+    content = read_file(file_path)
+    content = content.replace('\n', '').replace(' ', '').replace('\t', '').replace('\r', '')
+    if content is not None:
+        segment_and_tag(content)
+
+
 if __name__ == '__main__':
-    # load the file
-    try:
-        with open('../NBA.txt', 'r', encoding='utf-8') as f:
-            content = f.read()
-        # 使用jieba辨别词性
-        words = jieba.posseg.cut(content)
-        # print the result
-        for word, flag in words:
-            print('%s %s' % (word, flag), end='/')
-    except FileNotFoundError as e:
-        print('File not found:', e)
-    except PermissionError as e:
-        print('Permission denied:', e)
-    except Exception as e:
-        print('Error occurred:', e)
+    main()
