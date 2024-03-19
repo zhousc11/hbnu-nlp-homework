@@ -14,5 +14,12 @@
 2. 使用jieba分词并输出处理结果
 3. 使用jieba分词并标注词性并输出处理结果
 
+实验指导书中的代码在[with_jieba](exp1/with_jieba)中，其余为自己实现的代码
+
 # 实验二
-还没布置
+[作业2.2](./exp2)
+1. 了解命名实体识别的基本原理。
+2. 了解条件随机场的基本原理。
+3. 掌握基于条件随机场方法的命名实体识别的实现过程。
+
+准备数据代码为[prepare_data.py](exp2/process_data.py)，测试模型代码为[test_model.py](exp2/test_model.py)
