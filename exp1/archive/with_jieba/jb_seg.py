@@ -14,7 +14,7 @@ def main():
     content = read_file(file_path)
     content = content.replace('\n', '').replace(' ', '').replace('\t', '').replace('\r', '')
     if content is not None:
-        # segement the text
+        # segment the text
         segmented_text = segment_text(content)
         print(segmented_text)
 
