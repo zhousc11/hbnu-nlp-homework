@@ -8,11 +8,11 @@ This is a repo for NLP homework of HBNU.
 - conda venv Python 3.10
 - Jieba
 
-# Exp1: Rule-based Segmentation
+# Exp1: Rule-based & jieba Segmentation
 [Homework2.1](./exp1)
-1. Segment Chinese text using forward matching and output the result
-2. Segment Chinese text using backward matching and output the result
-3. Segment Chinese text using bidirectional matching and output the result
+1. Segment Chinese text using forward, backward, bidirectional matching and output the result
+2. Segment Chinese text using jieba and output the result
+3. Tagging the words using jieba and output the result
 
-# Exp2: Jieba Segmentation
-[Homework2.2](./exp2)
+# Exp2
+To be continued...
