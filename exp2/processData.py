@@ -44,8 +44,8 @@ def corpusHandler(corpusPath):
     import os
     root = os.path.dirname(corpusPath)
     with open(corpusPath, encoding='UTF-8') as corpus_f, \
-            open('../test/train.txt', 'w+', encoding='UTF-8') as train_f, \
-            open('../test/test.txt', 'w+', encoding='UTF-8') as test_f:
+            open('./train.txt', 'w+', encoding='UTF-8') as train_f, \
+            open('./test.txt', 'w+', encoding='UTF-8') as test_f:
         pos = 0
         for line in corpus_f:
             line = line.strip('\r\n\t')
