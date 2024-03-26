@@ -1,3 +1,4 @@
+# 提炼数据集，将标记为ns的提取出来，作为地名识别语料
 def tag_line(words, mark):
     chars = []
     tags = []
@@ -38,6 +39,7 @@ def tag_line(words, mark):
     return chars, tags
 
 
+# 划分成训练集和测试集
 def corpusHandler(corpusPath):
     import os
     root = os.path.dirname(corpusPath)
