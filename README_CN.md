@@ -23,3 +23,6 @@
 3. 掌握基于条件随机场方法的命名实体识别的实现过程。
 
 准备数据代码为[prepare_data.py](exp2/process_data.py)，测试模型代码为[test_model.py](exp2/test_model.py)
+
+# 实验三
+[作业3](./exp3)
