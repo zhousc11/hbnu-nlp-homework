@@ -8,8 +8,8 @@ def get_data():
     获取数据
     :return：文本数据，对应的labels
     """
-    with open('../dataset/data/ham_data.txt', encoding='utf-8') as ham_f, open('../dataset/data/spam_data.txt',
-                                                                               encoding='utf-8') as spam_f:
+    with open('./dataset/data/ham_data.txt', encoding='utf-8') as ham_f, open('./dataset/data/spam_data.txt',
+                                                                              encoding='utf-8') as spam_f:
         ham_data = ham_f.readlines()
         spam_data = spam_f.readlines()
 
