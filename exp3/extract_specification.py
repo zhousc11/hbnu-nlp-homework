@@ -1,19 +1,19 @@
-import jieba
-import numpy as np
-from sklearn.feature_extraction.text import CountVectorizer
-# 载入词袋模型特征
-from sklearn.feature_extraction.text import TfidfVectorizer
-# 载入Tfidf转换器
-from sklearn.feature_extraction.text import TfidfTransformer
 # 载入Tfidf特征
 import gensim
-from sklearn.naive_bayes import MultinomialNB
-# 导入多项朴素贝叶斯分配算法
-from sklearn.linear_model import SGDClassifier
-# 导入随机梯度下降分类器
-from sklearn.linear_model import LogisticRegression
+import jieba
+import numpy as np
 # 导入逻辑回归分类器
 from sklearn import metrics
+from sklearn.feature_extraction.text import CountVectorizer
+# 载入Tfidf转换器
+from sklearn.feature_extraction.text import TfidfTransformer
+# 载入词袋模型特征
+from sklearn.feature_extraction.text import TfidfVectorizer
+# 导入随机梯度下降分类器
+from sklearn.linear_model import LogisticRegression
+# 导入多项朴素贝叶斯分配算法
+from sklearn.linear_model import SGDClassifier
+from sklearn.naive_bayes import MultinomialNB
 
 from exp3.dataprocess import train_corpus, test_corpus
 from exp3.stopword_filter import normalize_corpus

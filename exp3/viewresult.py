@@ -11,7 +11,7 @@ for document, label, predicted_label in zip(test_corpus, test_labels, svm_tfidf_
         print('文本：-')
         print(re.sub('\n', '', document))
         num += 1
-        if num== 4:
+        if num == 4:
             break
 
 num = 0
