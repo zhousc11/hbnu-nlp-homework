@@ -644,7 +644,7 @@ input_text = tf.constant([
     'hace mucho frio aqui.',  # "It's really cold here."
     'Esta es mi vida.',  # "This is my life.""
 ])
-result = Translator.translate(
+result = translator.translate(
     input_text=input_text)
 
 print(result['text'][0].numpy().decode())
