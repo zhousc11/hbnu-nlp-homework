@@ -1,0 +1,6 @@
+tensorflow_text==2.6.0
+tensorflow==2.6.0
+keras==2.6.0
+matplotlib==3.3.4
+typing-extensions==3.7.4.3
+numpy==1.19.5
