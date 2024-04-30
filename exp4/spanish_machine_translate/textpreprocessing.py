@@ -4,7 +4,7 @@ import tensorflow_text as tf_text
 from keras.integration_test.preprocessing_test_utils import preprocessing
 from matplotlib import pyplot as plt
 
-from exp4.processdatasets import inp, targ, example_input_batch
+from exp4.spanish_machine_translate.processdatasets import inp, targ, example_input_batch
 
 example_text = tf.constant('¿Todavía está en casa?')
 

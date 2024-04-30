@@ -1,26 +1,17 @@
-import typing
-
-import numpy as np
-import tensorflow as tf
-from matplotlib import pyplot as plt
-
-from exp4.checkshape import ShapeChecker
-from exp4.processdatasets import example_input_batch, example_target_batch, dataset
-from exp4.textpreprocessing import input_text_processor, embedding_dim, units, output_text_processor
+from exp4.spanish_machine_translate.checkshape import ShapeChecker
+from exp4.spanish_machine_translate.processdatasets import example_input_batch, example_target_batch, dataset
+from exp4.spanish_machine_translate.textpreprocessing import input_text_processor, embedding_dim, units, output_text_processor
 
 
 # tensorflow_text, tensorflow, matplotlib
 import numpy as np
 
 import typing
-from typing import Any, Tuple
 # Customize types
 import tensorflow as tf
-from tensorflow.keras.layers.experimental import preprocessing
 # import preprocess module
-import tensorflow_text as tf_text
 import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
+
 
 # shape checker
 class ShapeChecker():
