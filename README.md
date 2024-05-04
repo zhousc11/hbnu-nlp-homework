@@ -28,3 +28,9 @@ The code for preparing data is [preparing_data.py](exp2/process_data.py), and th
 [Homework3](./exp3)
 1. Learn the basic principles and concepts of often-used machine learning algorithms.
 2. Implement often-used text classification algorithms.
+
+# Exp4: Machine translation practice based on attention mechanism
+[Homework4](./exp4)
+1. Learn the concept and basic principles of the attention mechanism.
+2. Get hang of the application of the attention mechanism in machine translation.
+Homework is in [chn-eng.ipynb](./exp4/chn-eng.ipynb), original code is in [here](./exp4/spanish_machine_translate)
