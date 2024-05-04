@@ -124,8 +124,8 @@ dataset = dataset.batch(BATCH_SIZE)
 # def process_jieba(text):
 #     words = jieba.cut(text)
 #     return ' '.join(words)
-# example_text = tf.constant('今天天气真不错啊，你感觉呢,我反正是觉得明天后天大后天都挺好的，汪炜我爱你，想要和你亲亲抱抱举高高，好喜欢宝宝')
-example_text = '今天天气真不错啊，你感觉呢,我反正是觉得明天后天大后天都挺好的，汪炜我爱你，想要和你亲亲抱抱举高高，好喜欢宝宝！'
+# example_text = tf.constant('今天天气真不错啊，你感觉呢,我反正是觉得明天后天大后天都挺好的，宝贝我爱你，想要和你亲亲抱抱举高高，好喜欢宝宝')
+example_text = '今天天气真不错啊，你感觉呢,我反正是觉得明天后天大后天都挺好的，宝贝我爱你，想要和你亲亲抱抱举高高，好喜欢宝宝！'
 
 example_text = tf.constant(process_jieba(example_text))
 
