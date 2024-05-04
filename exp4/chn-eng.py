@@ -787,10 +787,19 @@ def translate_unrolled(self,
 Translator.translate = translate_unrolled
 # %%
 # %%time
-input_text = tf.constant([
-    '你 很 漂亮.',  # "It's freezing here."
-    '我 想 和 你 睡觉.',  # "This is my life.""
-])
+
+
+def jieba_tokenize(inputtext):
+    return ' '.join(jieba.cut(inputtext))
+
+
+raw_input_texts = [
+    '你很漂亮.',
+    '我想和你睡觉',
+]
+
+tokenized_inputs = [jieba_tokenize(text) for text in raw_input_texts]
+input_text = tf.constant(tokenized_inputs)
 result = translator.translate(
     input_text=input_text)
 
@@ -802,3 +811,5 @@ print()
 # it is very cold here .
 # this is my life .
 # Wall time: 266 ms
+
+# %%
